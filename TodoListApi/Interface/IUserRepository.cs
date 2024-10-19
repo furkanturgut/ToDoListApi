@@ -10,6 +10,7 @@ namespace TodoListApi.Interface
         bool CreateUser (User user);
         bool UpdateUser (User user);
         bool DeleteUser (User user);
+        bool UserExist (int UserId);
         bool Save();
         
     }

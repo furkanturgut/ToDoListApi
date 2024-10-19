@@ -47,5 +47,12 @@ namespace TodoListApi.Repository
             _context.Update(user);
             return Save();
         }
+
+        public bool UserExist(int UserId)
+        {
+            return _context.users.Any( u => u.Id == UserId);
+        }
+
+
     }
 }
