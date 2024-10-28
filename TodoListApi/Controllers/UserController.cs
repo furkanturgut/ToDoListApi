@@ -1,12 +1,14 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol.Core.Types;
+using TodoListApi.auth.TodoListApi.auth;
 using TodoListApi.Dto_s;
 using TodoListApi.Interface;
 using TodoListApi.Models;
 
 namespace TodoListApi.Controllers
 {
+    [BasicAuth]
     [ApiController]
     [Route("api/[Controller]")]
     public class UserController : Controller
@@ -112,10 +114,5 @@ namespace TodoListApi.Controllers
             }
             return NoContent();
         }
-
-
-
-
-
     }
 }
